@@ -28,19 +28,26 @@ fs.readdir(directory, (err, files) => {
         }
 
         const $ = cheerio.load(data);
-        const connectionBoxes = [];
 
         $('div[id^="connectionBox-"]').each((_, element) => {
-            connectionBoxes.push($(element).html().trim());
+            const totalTime = $(element).find('.connection-head p').text().trim();
+            const title = $(element).find('h3').attr('title');
+
+            const startingPlace = $(element).find('ul li.item').first().find('p.station strong').text().trim();
+            const startingTime = $(element).find('ul li.item').first().find('p.time').text().trim();
+
+            const endingPlace = $(element).find('ul li.item').last().find('p.station strong').text().trim();
+            const endingTime = $(element).find('ul li.item').last().find('p.time').text().trim();
+
+            console.log(`
+Informace o Dopravě:
+-------------------------------------------
+Linka:       | ${title} |
+Vyjede z:    | ${startingPlace} v ${startingTime} |
+A dojede do: | ${endingPlace} v ${endingTime} |
+Celkový čas: | ${totalTime} |
+-------------------------------------------`);
+
         });
-
-
-
-        if (connectionBoxes.length === 0) {
-            console.log('No <div id="connectionBox-..."> elements found.');
-        } else {
-            console.log(connectionBoxes[0]);
-        }
-
     });
 });

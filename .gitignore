@@ -135,3 +135,4 @@ dist
 # Idos Project Files
 Idos/*.html
 Idos/*.tmp
+Idos/*.json
