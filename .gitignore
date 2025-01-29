@@ -131,3 +131,7 @@ dist
 
 # WebStorm Files
 .idea/*
+
+# Idos Project Files
+idos/*.html
+idos/*.tmp

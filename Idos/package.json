@@ -1,0 +1,12 @@
+{
+  "name": "idos",
+  "version": "1.0.0",
+  "main": "Times.js",
+  "author": "tombos",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
