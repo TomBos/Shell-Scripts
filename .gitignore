@@ -133,5 +133,5 @@ dist
 .idea/*
 
 # Idos Project Files
-idos/*.html
-idos/*.tmp
+Idos/*.html
+Idos/*.tmp
