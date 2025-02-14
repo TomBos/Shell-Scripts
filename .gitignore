@@ -136,3 +136,9 @@ dist
 Idos/*.html
 Idos/*.tmp
 Idos/*.json
+
+MegaPizza/**.js
+MegaPizza/*.js
+MegaPizza/*.tmp
+MegaPizza/*.html
+MegaPizza/*.txt
